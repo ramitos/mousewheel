@@ -36,21 +36,21 @@ module.exports.bind = function (el, callback, capture) {
     };
     
     // calculate deltaY (and deltaX) according to the event
-    if (support === 'mousewheel' ) {
+    if (support === 'mousewheel') {
       // Webkit also support wheelDeltaX
-      if(e.wheelDeltaX) event.deltaX = - 1/40 * e.wheelDeltaX;
-      event.deltaY = - 1/40 * e.wheelDelta;
+      if(e.wheelDeltaX) event.deltaX = - 1/5 * e.wheelDeltaX;
+      event.deltaY = - 1/5 * e.wheelDeltaY;
     } else {
       event.deltaY = e.detail;
     }
     
     // it's time to fire the callback
-    return callback( event );
+    callback(event);
   };
   
   // handle MozMousePixelScroll in older Firefox
-  if(support === 'DOMMouseScroll') ev.bind(el, 'MozMousePixelScroll', callback, capture);
-  ev.bind(el, support, support === 'wheel' ? callback : handle, capture);
+  if(support === 'DOMMouseScroll') ev.bind(el, 'MozMousePixelScroll', callback, capture || false);
+  ev.bind(el, support, support === 'wheel' ? callback : handle, capture || false);
   callbacks[callback] = handle;
 };
 
