@@ -1,6 +1,6 @@
 # mousewheel
 
-cross-browser mousewheel event handling based on [Mozilla wheel shim](https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/wheel#Listening_to_this_event_across_browser)
+cross-browser `wheel` event handling based on [Mozilla wheel shim](https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/wheel#Listening_to_this_event_across_browser)
 
 ## installation
 
