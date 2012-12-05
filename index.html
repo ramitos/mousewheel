@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='build/build.js'></script>
+    <link href='http://necolas.github.com/normalize.css/2.0.1/normalize.css' rel='stylesheet' type='text/css'>
+    <style>
+      #container {
+        height: 10000px;
+        width: 10000px;
+      }
+      
+      #controls {
+        background-color: #51A351;
+        position: fixed;
+        top: 0px;
+        border-bottom: 1px #000 solid;
+        width: 100%;
+        padding: 10px;
+      }
+      
+      #controls p {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        color: white;
+      }
+      
+      #controls span {
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='controls'>
+      <p>Event used: <span id='event'></span></p>
+      <p>DeltaX: <span id='deltay'></span></p>
+      <p>DeltaY: <span id='deltax'></span></p>
+    </div>
+    <div id='container'></div>
+    <script>
+      var mousewheel = require('mousewheel');
+      
+      document.getElementById('event').innerHTML = mousewheel.support;
+      
+      mousewheel.bind(document.body, function (e) {
+        document.getElementById('deltax').innerHTML = e.deltaX;
+        document.getElementById('deltay').innerHTML = e.deltaY;
+      });
+    </script>
+  </body>
+</html>
