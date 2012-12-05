@@ -1,7 +1,9 @@
 {
   "name": "mousewheel",
   "repo": "ramitos/mousewheel",
+  "twitter": "@ramitos",
   "version": "0.0.2",
+  "license": "MIT",
   "description": "cross-browser mousewheel event handling",
   "scripts": ["src/mousewheel.js"],
   "main": "src/mousewheel.js",
