@@ -1,2 +1,5 @@
 components
 /build/build.css
+src
+component.json
+readme.md
