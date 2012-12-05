@@ -1,0 +1,12 @@
+{
+  "name": "mousewheel",
+  "repo": "ramitos/mousewheel",
+  "version": "0.0.1",
+  "description": "cross-browser mousewheel event handling",
+  "scripts": ["src/mousewheel.js"],
+  "main": "src/mousewheel.js",
+  "dependencies": {
+    "ramitos/iseventsupported": "*",
+    "component/event": "*"
+  }
+}
